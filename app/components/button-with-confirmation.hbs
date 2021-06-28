@@ -1,0 +1,22 @@
+<button type="button" {{on "click" this.launchConfirmDialog}}>
+  {{this.text}}
+</button>
+
+{{#if this.isConfirming}}
+  <div class="confirm-dialog">
+    {{yield this.confirmValue}}
+
+    <button type="button"
+            class="confirm-submit"
+      {{on "click" this.submitConfirm}}
+    >
+      OK
+    </button>
+    <button type="button"
+            class="confirm-cancel"
+      {{on "click" this.cancelConfirm}}
+    >
+      Cancel
+    </button>
+  </div>
+{{/if}}

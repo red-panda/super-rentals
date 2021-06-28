@@ -13,6 +13,6 @@
     </div>
   </div>
   <div class="menu__toggle">
-    <Toggle {{on "click" this.toggleTheme}} @onToggle="{{ this.toggleTheme }}"></Toggle>
+    <ToggleSwitcher @labelOff="Light theme" @labelOn="Dark theme" @onToggle={{fn this.toggleTheme 123}}></ToggleSwitcher>
   </div>
 </nav>
