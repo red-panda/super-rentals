@@ -10,19 +10,12 @@ export default class ToggleSwitcherComponent extends Component {
 
   @action
   async submitToggle(val) {
-    console.log(val);
     this.textVal = val;
     if (this.args.onToggle) {
       await this.args.onToggle();
     }
 
     this.toggled = !this.toggled;
-
-    if (this.toggled) {
-      console.log(this.text);
-    } else {
-      console.log(this.textToggled);
-    }
   }
 
   get label() {

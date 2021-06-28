@@ -3,20 +3,20 @@ import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
 
 export default class NavBarComponent extends Component {
-  @service login;
+  @service router;
 
   @action
-  toggleTheme(val) {
-    console.log(val);
-    if (!document.body.classList.contains('dark-theme')) {
-      document.body.classList.add('dark-theme');
+  toggleTheme() {
+    const $body = document.body;
+    const __activeClass = 'dark-theme';
+    if (!$body.classList.contains(__activeClass)) {
+      $body.classList.add(__activeClass);
     } else {
-      document.body.classList.remove('dark-theme');
+      $body.classList.remove(__activeClass);
     }
   }
 
-  @action
-  deleteAccount() {
-    this.login.deleteUser();
+  get activeRoute() {
+    return this.router.currentRouteName;
   }
 }

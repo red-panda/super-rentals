@@ -4,15 +4,11 @@
       <h1>SuperRentals</h1>
     </LinkTo>
     <div class="links">
-      <LinkTo @route="about" class="menu-about">
-        About
-      </LinkTo>
-      <LinkTo @route="contact" class="menu-contact">
-        Contact
-      </LinkTo>
+      <LinkToRoute @route="about" @classes="menu-link menu-about">About</LinkToRoute>
+      <LinkToRoute @route="contact" @classes="menu-link menu-contact" >Contact</LinkToRoute>
     </div>
   </div>
   <div class="menu__toggle">
-    <ToggleSwitcher @labelOff="Light theme" @labelOn="Dark theme" @onToggle={{fn this.toggleTheme 123}}></ToggleSwitcher>
+    <ToggleSwitcher @labelOff="Light theme" @labelOn="Dark theme" @onToggle={{this.toggleTheme}}></ToggleSwitcher>
   </div>
 </nav>
