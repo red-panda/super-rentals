@@ -14,6 +14,7 @@
         "category": "Estate",
         "bedrooms": 15,
         "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg",
+        "images": ["https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/The_Crane_Estate_at_Castle_Hill_in_Ipswich%2C_Massachusetts.jpg/2880px-The_Crane_Estate_at_Castle_Hill_in_Ipswich%2C_Massachusetts.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/2a/Rose_Garden%2C_Castle_Hill%2C_Ipswich_MA.jpg"],
         "description": "This grand old mansion sits on over 100 acres of rolling hills and dense redwood forests."
       }
     },
@@ -31,6 +32,7 @@
         "category": "Condo",
         "bedrooms": 1,
         "image": "https://upload.wikimedia.org/wikipedia/commons/2/20/Seattle_-_Barnes_and_Bell_Buildings.jpg",
+        "images": ["https://upload.wikimedia.org/wikipedia/commons/2/20/Seattle_-_Barnes_and_Bell_Buildings.jpg", "https://upload.wikimedia.org/wikipedia/commons/d/db/Seattle_-_Barnes_Building.jpg"],
         "description": "A commuters dream. This rental is within walking distance of 2 bus stops and the Metro."
       }
     },
@@ -48,6 +50,7 @@
         "category": "Apartment",
         "bedrooms": 3,
         "image": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg",
+        "images": ["https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg"],
         "description": "Convenience is at your doorstep with this charming downtown rental. Great restaurants and active night life are within a few feet."
       }
     }

@@ -13,6 +13,7 @@
       "category": "Estate",
       "bedrooms": 15,
       "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg",
+      "images": ["https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/The_Crane_Estate_at_Castle_Hill_in_Ipswich%2C_Massachusetts.jpg/2880px-The_Crane_Estate_at_Castle_Hill_in_Ipswich%2C_Massachusetts.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/2a/Rose_Garden%2C_Castle_Hill%2C_Ipswich_MA.jpg"],
       "description": "This grand old mansion sits on over 100 acres of rolling hills and dense redwood forests."
     }
   }

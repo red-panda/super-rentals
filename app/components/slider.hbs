@@ -4,12 +4,14 @@
     <button class="slider__next js-slider-next" type="button">Next</button>
     <div class="slider__wrap js-slider-wrap">
       {{#each @rentals as |rental|}}
-        <div class="slider__item">
-          <img src={{rental.image}} alt="" class="slider__img">
-          <LinkTo @route="rental" @model={{rental}} class="slider__link">
-            {{rental.title}}
-          </LinkTo>
-        </div>
+        {{#each rental.images as |image|}}
+          <div class="slider__item">
+            <img src={{image}} alt="" class="slider__img">
+            <LinkTo @route="rental" @model={{rental}} class="slider__link">
+              {{rental.title}}
+            </LinkTo>
+          </div>
+        {{/each}}
       {{/each}}
     </div>
   </div>
