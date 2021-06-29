@@ -1,5 +1,5 @@
-<div {{on "click" this.submitToggle}} class="toggle {{if this.toggled "toggle--active"}}">
+<div class="toggle {{if this.toggled "toggle--active"}}" {{on "click" this.submitToggle}}>
   <span class="label">{{this.label}}</span>
   <input class="input" type="checkbox" />
-  <label class="slider"></label>
+  <label class="toggle__slider"></label>
 </div>

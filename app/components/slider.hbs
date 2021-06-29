@@ -1,0 +1,16 @@
+<div class="wrap" {{did-insert this.loadSlider}}>
+  <div class="slider js-slider">
+    <button class="slider__prev js-slider-prev" type="button">Prev</button>
+    <button class="slider__next js-slider-next" type="button">Next</button>
+    <div class="slider__wrap js-slider-wrap">
+      {{#each @rentals as |rental|}}
+        <div class="slider__item">
+          <img src={{rental.image}} alt="" class="slider__img">
+          <LinkTo @route="rental" @model={{rental}} class="slider__link">
+            {{rental.title}}
+          </LinkTo>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

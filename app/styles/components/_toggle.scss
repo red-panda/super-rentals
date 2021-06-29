@@ -19,7 +19,7 @@ $transition: all $transition-duration $transition-function !default;
 .toggle {
   display: block;
 
-  .slider {
+  &__slider {
     position: relative;
     display: inline-block;
     height: $slider-height;
