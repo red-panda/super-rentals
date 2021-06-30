@@ -27,16 +27,16 @@ module('Integration | Component | slider', function (hooks) {
   test('it renders', async function (assert) {
     this.set('rentals', testImages);
 
-    await render(hbs`<Slider @images={{this.rentals}}/>`);
+    await render(hbs`<Gallery @images={{this.rentals}}/>`);
 
-    assert.dom('.js-slider').exists();
-    assert.dom('.slider__item').exists();
-    assert.dom('.slider__item:first-child .slider__img')
+    assert.dom('.js-gallery').exists();
+    assert.dom('.gallery__item').exists();
+    assert.dom('.gallery__item:first-child .gallery__img')
       .exists()
       .hasAttribute(
         'src',
         'https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg'
       );
-    assert.dom('.slider__item:first-child .slider__link').hasText('Grand Old Mansion');
+    assert.dom('.gallery__item:first-child .gallery__link').hasText('Grand Old Mansion');
   });
 });

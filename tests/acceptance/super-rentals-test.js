@@ -67,7 +67,7 @@ module('Acceptance | super rentals', function (hooks) {
 
     assert.equal(currentURL(), '/gallery');
 
-    assert.dom('.js-slider').exists();
+    assert.dom('.js-gallery').exists();
   });
 
   test('visiting /getting-in-touch', async function (assert) {

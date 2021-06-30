@@ -2,9 +2,9 @@ import Component from '@glimmer/component';
 
 //TODO Add lazy-load
 //TODO <picture> support
-function Slider(setting) {
+function Gallery(setting) {
   if (document.querySelector(setting.wrap) === null) {
-    console.error('No slider');
+    console.error('No gallery');
     return;
   }
 
@@ -236,13 +236,13 @@ function Timer(callback, delay) {
   this.resume();
 }
 
-export default class SliderComponent extends Component {
-  loadSlider() {
+export default class GalleryComponent extends Component {
+  loadGallery() {
     //init
-    let rentalSlider = new Slider({
-      wrap: '.js-slider-wrap',
-      prev: '.js-slider-prev',
-      next: '.js-slider-next',
+    let rentalGallery = new Gallery({
+      wrap: '.js-gallery-wrap',
+      prev: '.js-gallery-prev',
+      next: '.js-gallery-next',
       touch: true,
       autoplay: true,
       autoplayDelay: 3000,
