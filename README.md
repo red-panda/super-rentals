@@ -2,6 +2,7 @@
 
 Super-rentals test-app
 1. Added DarkMode through the new component `<ToggleSwitcher />`
+   CSS custom properties picked for DarkMode on/off because of no browser requirements (Should use css-classes instead in case of IE support)
 2. Added new route Gallery and image-slider `<Gallery />` with ability to navigate to rental-pages
 3. Added active route-link highlited
 4. Added test for new components
