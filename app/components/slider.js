@@ -1,5 +1,7 @@
 import Component from '@glimmer/component';
 
+//TODO Add lazy-load
+//TODO <picture> support
 function Slider(setting) {
   if (document.querySelector(setting.wrap) === null) {
     console.error('No slider');
