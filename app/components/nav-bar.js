@@ -7,6 +7,7 @@ export default class NavBarComponent extends Component {
 
   @action
   toggleTheme() {
+    //TODO Add saving value to local storage
     const $body = document.body;
     const __activeClass = 'dark-theme';
     if (!$body.classList.contains(__activeClass)) {

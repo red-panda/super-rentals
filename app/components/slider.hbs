@@ -1,9 +1,17 @@
 <div class="wrap" {{did-insert this.loadSlider}}>
   <div class="slider js-slider">
-    <button class="slider__prev js-slider-prev" type="button">Prev</button>
-    <button class="slider__next js-slider-next" type="button">Next</button>
+    <button class="slider__prev js-slider-prev" type="button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+        <path d="M15.244 11.767L8.39 18.672a1.12 1.12 0 11-1.59-1.579l6.064-6.11-6.11-6.064a1.12 1.12 0 011.58-1.59l6.904 6.854a1.117 1.117 0 01.006 1.584" fill="#fff"/>
+      </svg>
+      Prev</button>
+    <button class="slider__next js-slider-next" type="button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+        <path d="M15.244 11.767L8.39 18.672a1.12 1.12 0 11-1.59-1.579l6.064-6.11-6.11-6.064a1.12 1.12 0 011.58-1.59l6.904 6.854a1.117 1.117 0 01.006 1.584" fill="#fff"/>
+      </svg>
+      Next</button>
     <div class="slider__wrap js-slider-wrap">
-      {{#each @rentals as |rental|}}
+      {{#each @images as |rental|}}
         {{#each rental.images as |image|}}
           <div class="slider__item">
             <img src={{image}} alt="" class="slider__img">

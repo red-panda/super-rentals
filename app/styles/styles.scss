@@ -25,6 +25,7 @@ button {
 
 body {
   background: var(--color-bg-main);
+  color: var(--color-text);
 }
 
 a {
@@ -81,6 +82,14 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  &__toggle {
+    padding-right: 10px;
+  }
+
+  &__left {
+    align-self: flex-start;
+  }
 }
 
 .menu h1 {
@@ -99,12 +108,15 @@ p {
 .menu a {
   text-decoration: none;
   padding: 0 15px;
-  color: var(--color-btn);
+  color: var(--color-menu);
   font-size: 20px;
+  line-height: 1;
   font-weight: bold;
+  transition: color 0.2s;
 
   &.active {
-    color: var(--color-link);
+    color: var(--color-menu-active);
+    transition: color 0.2s;
   }
 }
 

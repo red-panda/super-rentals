@@ -28,13 +28,17 @@ function Slider(setting) {
 
     if (options.opt.position < 0) {
       options.sel.wrap.classList.add('no-transition');
-      options.sel.wrap.style['transform'] = `translateX(-${options.opt.maxPosition}00%)`;
+      options.sel.wrap.style[
+        'transform'
+      ] = `translateX(-${options.opt.maxPosition}00%)`;
       options.opt.position = options.opt.maxPosition - 1;
     }
 
     setTimeout(() => {
       options.sel.wrap.classList.remove('no-transition');
-      options.sel.wrap.style['transform'] = `translateX(-${options.opt.position}00%)`;
+      options.sel.wrap.style[
+        'transform'
+      ] = `translateX(-${options.opt.position}00%)`;
     }, 10);
 
     options.sel.wrap.addEventListener('transitionend', () => {
@@ -59,7 +63,9 @@ function Slider(setting) {
     }
 
     options.sel.wrap.classList.remove('no-transition');
-    options.sel.wrap.style['transform'] = `translateX(-${options.opt.position}00%)`;
+    options.sel.wrap.style[
+      'transform'
+    ] = `translateX(-${options.opt.position}00%)`;
 
     options.sel.wrap.addEventListener('transitionend', () => {
       if (options.opt.position >= options.opt.maxPosition) {
@@ -119,8 +125,8 @@ function Slider(setting) {
     xDiff = xDown - xUp;
     yDiff = yDown - yUp;
 
-    if (Math.abs( xDiff ) > Math.abs( yDiff ) ) {
-      if (xDiff > 0 ) {
+    if (Math.abs(xDiff) > Math.abs(yDiff)) {
+      if (xDiff > 0) {
         this.nextSlide();
       } else {
         this.prevSlide();
@@ -157,7 +163,9 @@ function Slider(setting) {
   };
 
   // Cloning first elem
-  options.sel.wrap.appendChild(options.sel.children[0].cloneNode(true));
+  if (options.sel.children && options.sel.children.length) {
+    options.sel.wrap.appendChild(options.sel.children[0].cloneNode(true));
+  }
 
   // Autoplay
   if (options.setting.autoplay === true) {
@@ -183,7 +191,10 @@ function Slider(setting) {
   }
 
   // Pause on hover
-  if (options.setting.autoplay === true && options.setting.pauseOnHover === true) {
+  if (
+    options.setting.autoplay === true &&
+    options.setting.pauseOnHover === true
+  ) {
     options.sel.wrap.addEventListener('mouseenter', () => {
       options.timer.pause();
     });
@@ -225,6 +236,7 @@ function Timer(callback, delay) {
 
 export default class SliderComponent extends Component {
   loadSlider() {
+    //init
     let rentalSlider = new Slider({
       wrap: '.js-slider-wrap',
       prev: '.js-slider-prev',

@@ -4,13 +4,9 @@ import { action } from '@ember/object';
 
 export default class ToggleSwitcherComponent extends Component {
   @tracked toggled = false;
-  @tracked textVal = '';
-  @tracked text;
-  @tracked textToggled;
 
   @action
-  async submitToggle(val) {
-    this.textVal = val;
+  async submitToggle() {
     if (this.args.onToggle) {
       await this.args.onToggle();
     }
@@ -18,7 +14,9 @@ export default class ToggleSwitcherComponent extends Component {
     this.toggled = !this.toggled;
   }
 
+  // Gets current label
   get label() {
+    // LabelOff - toggle-switcher off, LabelOn - toggle-switcher on
     let { labelOff, labelOn } = this.args;
 
     let currentLabel = '';

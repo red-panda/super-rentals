@@ -1,14 +1,31 @@
 body {
+  --color-text: #262626;
   --color-bg-main: #f3f3f3;
   --color-bg-secondary: #f9f9f9;
   --color-bg-menu: #e46855;
   --color-bg-results: #f6f6f6;
   --color-link: #016aba;
   --color-btn: #fff;
+  --color-menu: #fff;
+  --color-menu-active: rgba(255,255,255,0.7);
   --color-btn-menu: #262626;
   --color-btn-menu-hover: #111;
 }
 
 body.dark-theme {
+  --color-text: #f3f3f3;
   --color-bg-main: #000;
+  --color-bg-secondary: #262626;
+  --color-bg-menu: #bc4634;
+  --color-bg-results: #000;
+  --color-link: #015b9f;
+  --color-btn: #f3f3f3;
+  --color-menu: #262626;
+  --color-menu-active: rgb(38, 38, 38,0.5);
+  --color-btn-menu: #262626;
+  --color-btn-menu-hover: #111;
+
+  img {
+    opacity: 0.8;
+  }
 }

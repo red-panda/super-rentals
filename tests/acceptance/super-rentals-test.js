@@ -62,6 +62,14 @@ module('Acceptance | super rentals', function (hooks) {
     assert.equal(currentURL(), '/getting-in-touch');
   });
 
+  test('visiting /gallery', async function (assert) {
+    await visit('/gallery');
+
+    assert.equal(currentURL(), '/gallery');
+
+    assert.dom('.js-slider').exists();
+  });
+
   test('visiting /getting-in-touch', async function (assert) {
     await visit('/getting-in-touch');
 
